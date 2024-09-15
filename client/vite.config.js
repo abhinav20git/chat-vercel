@@ -8,7 +8,7 @@ export default defineConfig({
     port:4001,
     proxy:{
       '/api':{
-        target: 'http://localhost:5001',
+        target: 'https://chat-vercel-server.onrender.com/',
         changeOrigin: true,
       }
     }
