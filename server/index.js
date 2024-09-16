@@ -4,11 +4,11 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import { app, server } from "./SocketIO/server.js";
-// import path from "path";
+import path from "path";
 import userRoute from "./routes/user.route.js";
 import messageRoute from "./routes/message.route.js";
 import cookieParser from "cookie-parser";
-// const app = express();
+
 dotenv.config(); 
 const URI=process.env.MONGODB_URI;
 
@@ -28,6 +28,18 @@ try{
 app.use("/api/user",userRoute);
 app.use("/api/message", messageRoute );
 
-server.listen(PORT,() =>{
-    console.log("listening on port 5001");
-})
+
+
+
+if (process.env.NODE_ENV === 'production') {
+    const dirPath =  path.resolve();
+    app.use(express.static("./client/dist"));
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(dirPath, './client/dist','index.html'));
+    });
+}
+
+server.listen(PORT, () => {
+    console.log(`Server is Running on port ${PORT}`);
+});
+
