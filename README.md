@@ -4,6 +4,7 @@
 A full-stack real-time chat application built with the MERN stack (MongoDB, Express.js, React.js, and Node.js) along with WebSockets for instant messaging functionality. This app allows students to connect with users in real time, using a secure, authenticated chat system.
 
 Features
+
 Real-time Messaging: Instant chat using WebSockets for a seamless conversation experience.
 User Authentication: Secure login and registration using JSON Web Tokens (JWT).
 User Management: Create accounts, manage profiles, and authenticate sessions.
