@@ -13,17 +13,16 @@ Data Storage: MongoDB for persisting user and message data.
 Socket.io Integration: Real-time communication with WebSocket support for live chat.
 
 Tech Stack
+
+
 Frontend
 React.js: Component-based UI development
 TailwindCSS: Styling framework for a responsive and modern look
 Socket.io Client: WebSocket client for real-time interactions
+
 Backend
 Node.js & Express.js: Server-side framework and routing
 MongoDB: NoSQL database for storing users and messages
 Socket.io Server: WebSocket server for real-time communication
 JWT Authentication: Secure access control
-Getting Started
-Prerequisites
-Node.js and npm installed
-MongoDB installed and running
 
